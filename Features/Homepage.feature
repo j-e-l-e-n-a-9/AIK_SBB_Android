@@ -1,4 +1,4 @@
-Feature:
+Feature: Homepage
 
   @Homepage_Bottom_nav_[MOB_ANDROID]
   Scenario Outline: Homepage_Bottom_nav_[MOB_ANDROID]

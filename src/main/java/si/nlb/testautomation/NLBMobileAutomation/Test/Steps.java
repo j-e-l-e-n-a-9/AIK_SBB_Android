@@ -9575,7 +9575,8 @@ public class Steps {
 
     @And("Wait for login page to load")
     public void waitForLoginPageToLoad() {
-        String xPath = "//*[contains(@resource-id,\"user_greeting_name\")]";
+
+        String xPath = "//*[contains(@content-desc,\"Notification\")]";
         By element = x.createByXpath(xPath);
         WaitHelpers.waitForElement(element);
     }
@@ -10413,6 +10414,12 @@ public class Steps {
         driver.findElement(By.xpath("//android.widget.TextView[contains(@text,'Vidi ceo promet')]")).click();
 
         //TODO 30 trasnsakcija?
+    }
+
+    @And("Click on element by xPath {string}")
+    public void clickOnElementByXPath(String xPath) throws Exception {
+        By element = x.createByXpath(xPath);
+        hp.clickElement(element);
     }
 }
 
